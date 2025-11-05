@@ -60,14 +60,14 @@ snowsql -a <account> -u <username>
 snowsql -f sql_implementation/00_deploy_all_views.sql
 ```
 
-### 2. Setup Cortex Analyst
+### 2. Setup Cortex Analyst & Cortex Agent
 
 ```bash
 # Deploy semantic model
-snowsql -f cortex_analyst_semantic_model.yaml
+snowsql -f cortex_analyst_semantic_view.sql
 ```
 
-### 3. Run Streamlit App (Optional)
+### 3. Create & Run Streamlit App for Viz & Chat with  Cortex Agent
 Upload the native python streamlit app code app_with_cortex_agent.py in snowflake
 
 ## Example Questions
@@ -110,11 +110,11 @@ Ask Cortex Analyst in plain English:
 
 This is a professional services solution template. Customize the views and semantic model based on your specific requirements.
 
-## 📝 License
+## License
 
 Internal use only - Professional Services solution
 
-## 🔗 Resources
+## Resources
 
 - [Snowflake Cortex Analyst Documentation](https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst)
 - [Snowflake Query History](https://docs.snowflake.com/en/sql-reference/account-usage/query_history)
